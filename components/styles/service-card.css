@@ -1,0 +1,76 @@
+.service-card {
+    position: relative;
+    width: 270px;
+    height: 350px;
+    border-radius: 14px;
+    z-index: 1111;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 60px #05141c, -20px -20px 60px #05081c;
+    ;
+  }
+  
+  .service-card-bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 259px;
+    height: 340px;
+    z-index: 2;
+    background: #b1dae7;
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid orangered;
+  }
+  
+  .service-card-blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: orangered;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+    
+  }
+
+  .title, .description, .details {
+    position: relative;
+    z-index: 3; /* Bring the text elements to the front */
+    color: #05081c; /* Set the text color */
+    text-align: center; /* Center the text */
+    padding: 0 24px 0 24px;
+}
+
+
+  
+  @keyframes blob-bounce {
+    0% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+  
+    50% {
+      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+  
+    75% {
+      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+  
+    100% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+  }
+  
