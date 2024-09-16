@@ -4,7 +4,7 @@
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import Image from "next/image";
-import "./styles/explore-btn.css"
+import "./styles/explore-btn.scss";
 
 const content = [
   {
@@ -20,16 +20,17 @@ const content = [
           objectives.
         </div>
         <div>
-        <a href="https://www.tsmsconsulting.com" target="_blank" rel="noopener noreferrer">
-  <button className="button ml-[135px] mt-8">
-    <svg className="svgIcon" viewBox="0 0 384 512">
-      <path
-        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-      ></path>
-    </svg>
-  </button>
-</a>
-
+          <a
+            href="https://www.tsmsconsulting.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button ml-[135px] mt-8">
+              <svg className="svgIcon" viewBox="0 0 384 512">
+                <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+              </svg>
+            </button>
+          </a>
         </div>
       </div>
     ),
@@ -53,16 +54,17 @@ const content = [
           industry with insightful conversations and entertaining performances.
         </div>
         <div>
-        <a href="https://www.nigerianfintechfestival.tsmsconsulting.com" target="_blank" rel="noopener noreferrer">
-  <button className="button ml-[130px] mt-8">
-    <svg className="svgIcon" viewBox="0 0 384 512">
-      <path
-        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-      ></path>
-    </svg>
-  </button>
-</a>
-
+          <a
+            href="https://www.nigerianfintechfestival.tsmsconsulting.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button ml-[130px] mt-8">
+              <svg className="svgIcon" viewBox="0 0 384 512">
+                <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+              </svg>
+            </button>
+          </a>
         </div>
       </div>
     ),
@@ -84,16 +86,17 @@ const content = [
           payments, artificial intelligence, cybersecurity, and more.
         </div>
         <div>
-        <a href="https://www.youthsforfintech.tsmsconsulting.com" target="_blank" rel="noopener noreferrer">
-  <button className="button ml-[130px] mt-8">
-    <svg className="svgIcon" viewBox="0 0 384 512">
-      <path
-        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-      ></path>
-    </svg>
-  </button>
-</a>
-
+          <a
+            href="https://www.youthsforfintech.tsmsconsulting.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button ml-[130px] mt-8">
+              <svg className="svgIcon" viewBox="0 0 384 512">
+                <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+              </svg>
+            </button>
+          </a>
         </div>
       </div>
     ),
@@ -114,16 +117,17 @@ const content = [
           and paper beats rock by covering it.
         </div>
         <div>
-        <a href="https://rock-paper-scissors-next-js-chi.vercel.app/" target="_blank" rel="noopener noreferrer">
-  <button className="button ml-[130px] mt-8">
-    <svg className="svgIcon" viewBox="0 0 384 512">
-      <path
-        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-      ></path>
-    </svg>
-  </button>
-</a>
-
+          <a
+            href="https://rock-paper-scissors-next-js-chi.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button ml-[130px] mt-8">
+              <svg className="svgIcon" viewBox="0 0 384 512">
+                <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+              </svg>
+            </button>
+          </a>
         </div>
       </div>
     ),

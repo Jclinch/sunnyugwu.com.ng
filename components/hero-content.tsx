@@ -2,7 +2,7 @@
 
 "use client";
 import { motion } from "framer-motion";
-import { HeroHighlight,  } from "./ui/hero-highlight";
+import { HeroHighlight } from "./ui/hero-highlight";
 
 export function HeroContent() {
   return (
@@ -21,9 +21,7 @@ export function HeroContent() {
           ease: [0.4, 0.0, 0.2, 1],
         }}
         className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-400 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
-      >
-       
-      </motion.h1>
+      ></motion.h1>
     </HeroHighlight>
   );
 }

@@ -1,6 +1,6 @@
 // path: official-website\components\contact-button.tsx
 
-import "../styles/contact-btn.css";
+import "../styles/contact-btn.scss";
 
 interface ContactButtonProps {
   onClick: () => void;

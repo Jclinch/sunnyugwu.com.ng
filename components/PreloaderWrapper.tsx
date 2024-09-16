@@ -1,8 +1,7 @@
 // path: components/PreloaderWrapper.tsx
 "use client";
-
 import { useEffect, useState } from "react";
-import "./styles/PreloaderWrapper.css";
+import "./styles/PreloaderWrapper.scss";
 
 export default function PreloaderWrapper() {
   const [isLoaded, setIsLoaded] = useState(false);

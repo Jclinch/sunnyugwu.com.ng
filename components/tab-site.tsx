@@ -1,7 +1,6 @@
 // path: official-website\components\tab-site.tsx
 
 "use client";
-
 import React, { useState } from "react";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
@@ -13,7 +12,7 @@ import {
   IconBrandWechat,
 } from "@tabler/icons-react";
 import Image from "next/image";
-import "./styles/nav-buttons.css";
+import "./styles/nav-buttons.scss";
 import ResumeButtonCopy from "./ui/resume-button-copy";
 import ContactButton from "./ui/contact-btn";
 import ServiceTab from "./services-tab";
@@ -120,10 +119,11 @@ const HomeContent = ({ onTabClick }: { onTabClick: (tab: string) => void }) => {
         <p className="mt-6 text-base">
           I&apos;m a developer that is well-versed in both front and back end
           technologies. Having skills in HTML/CSS/JS, React/Next.js frontend
-          stack, Python/Node.js and PostgreSQL backend stack. Develop, maintaining and
-          integrating Restful APIs for Web applications and also having
-          experience in managing database and an exceptional problem-solving
-          skills with a spirit of collegiality and growth within the profession.
+          stack, Python/Node.js and PostgreSQL backend stack. Develop,
+          maintaining and integrating Restful APIs for Web applications and also
+          having experience in managing database and an exceptional
+          problem-solving skills with a spirit of collegiality and growth within
+          the profession.
         </p>
         <div className="mt-6 ml-[-160px] flex flex-row gap-[6rem] justify-center">
           <ResumeButtonCopy />
@@ -164,11 +164,13 @@ const PortfolioContent = () => {
 const ContactContent = ({ title }: { title: string }) => {
   return (
     <div className=" bg-[#0F172ACC] p-[40rem]">
-      <h1 className="text-5xl font-bold text-center mt-[-20px] text-[orangered]">{title}</h1>
+      <h1 className="text-5xl font-bold text-center mt-[-20px] text-[orangered]">
+        {title}
+      </h1>
       <div className="mt-[38px]">
         <ContactForm />
       </div>
-      </div>
+    </div>
   );
 };
 const SocialMediaContent = ({ title }: { title: string }) => {
