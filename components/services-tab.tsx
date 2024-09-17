@@ -5,7 +5,6 @@ import {
   IconBrandNextjs,
   IconStackFront,
 } from "@tabler/icons-react";
-// import SectionTitleDesign from "./sectionTitleDesign";
 
 const ServiceTab = () => {
   return (

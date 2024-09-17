@@ -65,7 +65,7 @@ const Skeleton = () => {
       repeat: Infinity,
       repeatDelay: 1,
     });
-  }, []);
+  });
   return (
     <div className=" overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
@@ -86,7 +86,7 @@ const Skeleton = () => {
         </Container>
       </div>
 
-      <div className="h-40 w-px absolute top-20 m-auto z-40 bg-gradient-to-b from-transparent via-cyan-500 to-transparent animate-move">
+      <div className="h-40 w-px absolute top-20 m-auto z-40 bg-gradient-to-b from-transparent via-white to-transparent animate-move">
         <div className="w-10 h-32 top-1/2 -translate-y-1/2 absolute -left-10">
           <Sparkles />
         </div>
@@ -121,9 +121,9 @@ const Sparkles = () => {
             width: `2px`,
             height: `2px`,
             borderRadius: "50%",
-            zIndex: 1,
+            zIndex: 10,
           }}
-          className="inline-block bg-blue-300 dark:bg-white"
+          className="inline-block bg-white dark:bg-white z-50"
         ></motion.span>
       ))}
     </div>

@@ -1,6 +1,5 @@
-//path: official-website\components\ui\sticky-scroll-reveal.tsx
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -17,8 +16,8 @@ export const StickyScroll = ({
   contentClassName?: string;
 }) => {
   const [activeCard, setActiveCard] = React.useState(0);
-  const ref = useRef<any>(null);
-  const { scrollYProgress } = useScroll({
+  const ref = useRef<HTMLDivElement | null>(null);
+    const { scrollYProgress } = useScroll({
     container: ref,
     offset: ["start start", "end start"],
   });
@@ -44,11 +43,13 @@ export const StickyScroll = ({
     "rgba(0, 0, 0, 0.8)", // black with 0.8 opacity
     "rgba(38, 38, 38, 0.8)", // --neutral-900 with 0.8 opacity
   ];
-  const linearGradients = [
+
+  // Memoize linearGradients so it only gets recalculated if dependencies change
+  const linearGradients = useMemo(() => [
     "linear-gradient(to bottom right, rgba(6, 182, 212, 0.8), rgba(16, 185, 129, 0.8))", // cyan-500, emerald-500 with 0.8 opacity
     "linear-gradient(to bottom right, rgba(236, 72, 153, 0.8), rgba(102, 126, 234, 0.8))", // pink-500, indigo-500 with 0.8 opacity
     "linear-gradient(to bottom right, rgba(251, 146, 60, 0.8), rgba(234, 179, 8, 0.8))", // orange-500, yellow-500 with 0.8 opacity
-  ];
+  ], []); // Empty dependency array since the gradients don’t change
 
   const [backgroundGradient, setBackgroundGradient] = useState(
     linearGradients[0]
@@ -56,7 +57,7 @@ export const StickyScroll = ({
 
   useEffect(() => {
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
+  }, [activeCard, linearGradients]); // linearGradients is now stable and won’t change on every render
 
   return (
     <motion.div

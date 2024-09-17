@@ -144,7 +144,6 @@ const ServiceContent = ({ title }: { title: string }) => {
         <h1 className="text-5xl font-bold mt-[-40px] text-[orangered]">
           {title}
         </h1>
-        {/* <h2 className="text-2xl">Content Header</h2> */}
         <div className="mt-4 ">
           <ServiceTab />
         </div>
@@ -156,7 +155,6 @@ const ServiceContent = ({ title }: { title: string }) => {
 const PortfolioContent = () => {
   return (
     <div className="text-center">
-      {/* <h1 className="text-5xl font-bold mt-[100px] text-[white] ">{title}</h1> */}
       <div className="mt-4">
         <PortfilioContent />
       </div>
@@ -176,22 +174,7 @@ const ContactContent = ({ title }: { title: string }) => {
     </div>
   );
 };
-// const SocialMediaContent = ({ title }: { title: string }) => {
-//   return (
-//     <div className=" bg-[#0F172ACC] p-[40rem]">
-//       <div className="text-5xl font-bold text-center  relative text-[orangered]  mt-[100px]">
-//         {title}
-//       </div>
-//       <div className="text-2xl">
-//         <SocialMedia />
-//       </div>
-//       <p className="mt-4">This is the content body.</p>
-//       <div className="mt-6">
-//         <button className="btn">Button</button>
-//       </div>
-//     </div>
-//   );
-// };
+
 
 const SocialMediaContent = ({ title }: { title: string }) => {
   return (
