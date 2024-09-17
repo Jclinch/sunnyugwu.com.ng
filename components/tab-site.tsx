@@ -18,6 +18,8 @@ import ContactButton from "./ui/contact-btn";
 import ServiceTab from "./services-tab";
 import { PortfilioContent } from "./portfolio";
 import ContactForm from "./contact-form";
+import { SocialMedia } from "./social-media";
+import { Tools } from "./tools";
 
 export function TabSite() {
   const [activeTab, setActiveTab] = useState("home");
@@ -46,15 +48,16 @@ export function TabSite() {
       icon: <IconBriefcase stroke={1} />,
     },
     {
-      title: "Contact Us",
-      value: "contact-us",
-      content: <ContactContent title="Get In Touch" />,
+      title: "Contact",
+      value: "contact",
+      content: <ContactContent title="Contact Me" />,
       icon: <IconMail stroke={1} />,
     },
     {
       title: "Social media",
       value: "social-media",
-      content: <SocialMediaContent title="Social Media" />,
+      content: <SocialMediaContent title="Get in touch" />,
+
       icon: <IconBrandWechat stroke={1} />,
     },
   ];
@@ -127,7 +130,7 @@ const HomeContent = ({ onTabClick }: { onTabClick: (tab: string) => void }) => {
         </p>
         <div className="mt-6 ml-[-160px] flex flex-row gap-[6rem] justify-center">
           <ResumeButtonCopy />
-          <ContactButton onClick={() => onTabClick("contact-us")} />
+          <ContactButton onClick={() => onTabClick("contact")} />
         </div>
       </div>
     </div>
@@ -173,15 +176,36 @@ const ContactContent = ({ title }: { title: string }) => {
     </div>
   );
 };
+// const SocialMediaContent = ({ title }: { title: string }) => {
+//   return (
+//     <div className=" bg-[#0F172ACC] p-[40rem]">
+//       <div className="text-5xl font-bold text-center  relative text-[orangered]  mt-[100px]">
+//         {title}
+//       </div>
+//       <div className="text-2xl">
+//         <SocialMedia />
+//       </div>
+//       <p className="mt-4">This is the content body.</p>
+//       <div className="mt-6">
+//         <button className="btn">Button</button>
+//       </div>
+//     </div>
+//   );
+// };
+
 const SocialMediaContent = ({ title }: { title: string }) => {
   return (
-    <div className="text-center">
-      <h1 className="text-5xl font-bold">{title}</h1>
-      <h2 className="text-2xl">Content Header</h2>
-      <p className="mt-4">This is the content body.</p>
-      <div className="mt-6">
-        <button className="btn">Button</button>
+    <div className="bg-[#0F172ACC] p-[40rem]">
+      <div className="text-5xl font-bold text-center sticky z-10  text-[orangered] mt-[20px]">
+        {title}
       </div>
+      <div className="text-2xl mt-[-70px]">
+        <SocialMedia />
+      </div>
+      <div className="mt-[-100px]">
+        <Tools />
+      </div>
+      
     </div>
   );
 };

@@ -21,6 +21,27 @@ const ServiceTab = () => {
             <div className="service-card-bg"></div>
             <div className="service-card-blob"></div>
             <div className="z-50 ml-[-70px] ">
+              <IconBrandGit
+                stroke={1}
+                size={100}
+                color="#05081c"
+                className=" mt-[10px]"
+              />
+            </div>
+            <div className="title font-extrabold text-xl">Development</div>
+            <div className="description font-semibold text-xs">
+              Software, Web, App Development
+            </div>
+            <div className="details font-mono text-sm mt-[20px]">
+              Proficient in various development such as software development,
+              website development, web and mobile apps development
+            </div>
+          </div>
+
+          <div className="service-card ">
+            <div className="service-card-bg"></div>
+            <div className="service-card-blob"></div>
+            <div className="z-50 ml-[-70px] ">
               <IconStackFront
                 stroke={1}
                 size={100}
@@ -32,7 +53,7 @@ const ServiceTab = () => {
               Frontend & Backend
             </div>
             <div className="description  font-semibold text-xs">
-              HTML, CSS, JavaScript, Typescript PostgreSQL
+              HTML, CSS, JavaScript, Typescript, PostgreSQL
             </div>
             <div className="details font-mono text-sm mt-[20px]">
               Proficient in building responsive and accessible softwares and web
@@ -52,35 +73,16 @@ const ServiceTab = () => {
                 className=" mt-[10px]"
               />
             </div>
-            <div className="title font-extrabold text-xl">Frameworks</div>
+            <div className="title font-extrabold text-xl">
+              Frameworks and Tools
+            </div>
             <div className="description font-semibold text-xs">
-              Next.js, React{" "}
+              Next.js, React, Git, Tailwind CSS
             </div>
             <div className="details font-mono text-sm mt-[20px]">
-              Experienced in building complex web applications using popular
-              JavaScript frameworks and libraries like React and Next.js.
-            </div>
-          </div>
-
-          <div className="service-card ">
-            <div className="service-card-bg"></div>
-            <div className="service-card-blob"></div>
-            <div className="z-50 ml-[-70px] ">
-              <IconBrandGit
-                stroke={1}
-                size={100}
-                color="#05081c"
-                className=" mt-[10px]"
-              />
-            </div>
-            <div className="title font-extrabold text-xl">Tools</div>
-            <div className="description font-semibold text-xs">
-              Git, Tailwind CSS
-            </div>
-            <div className="details font-mono text-sm mt-[20px]">
-              Proficient in using various development tools and technologies to
-              streamline the development process and create visually appealing
-              designs.
+              Experienced in using React, Next.js and using various development
+              tools and technologies to streamline the development process and
+              create visually appealing designs.
             </div>
           </div>
         </div>

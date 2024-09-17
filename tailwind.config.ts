@@ -14,6 +14,7 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
+        move: "move 5s linear infinite",
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",
         third: "moveInCircle 40s linear infinite",
@@ -23,6 +24,10 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       keyframes: {
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
         moveHorizontal: {
           "0%": { transform: "translateX(-50%) translateY(-10%)" },
           "50%": { transform: "translateX(50%) translateY(10%)" },
