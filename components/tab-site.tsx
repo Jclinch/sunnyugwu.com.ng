@@ -63,22 +63,22 @@ export function TabSite() {
   ];
 
   return (
-    <div className="h-screen flex relative">
-      {/* Left side navigation */}
-      <nav className="flex items-center justify-center nav-container">
-        {tabs.map((tab) => (
-          <button
-            key={tab.value}
-            className={`cta nav-item ${tab.value}-btn ${
-              activeTab === tab.value ? "active" : ""
-            }`}
-            onClick={() => handleTabClick(tab.value)}
-          >
-            {tab.icon}
-            <span>{tab.title}</span>
-          </button>
-        ))}
-      </nav>
+    <div className="h-screen flex flex-col md:flex-row relative">
+  {/* Left side navigation on larger screens, bottom navigation on mobile */}
+  <nav className="flex md:flex-col flex-row items-center justify-center md:w-auto w-full md:h-full h-auto nav-container fixed bottom-0 md:static">
+    {tabs.map((tab) => (
+      <button
+        key={tab.value}
+        className={`cta nav-item ${tab.value}-btn ${
+          activeTab === tab.value ? "active" : ""
+        }`}
+        onClick={() => handleTabClick(tab.value)}
+      >
+        {tab.icon}
+        <span>{tab.title}</span>
+      </button>
+    ))}
+  </nav>
 
       {/* Main content */}
       <div className="flex-grow overflow-hidden relative">

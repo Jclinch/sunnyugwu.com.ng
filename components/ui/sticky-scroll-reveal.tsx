@@ -39,6 +39,7 @@ export const StickyScroll = ({
   });
 
   const backgroundColors = [
+    "rgba(0, 28, 54, 0.8)", // --slate-950 with 0.8 opacity
     "rgba(15, 23, 42, 0.8)", // --slate-950 with 0.8 opacity
     "rgba(0, 0, 0, 0.8)", // black with 0.8 opacity
     "rgba(38, 38, 38, 0.8)", // --neutral-900 with 0.8 opacity
@@ -46,6 +47,7 @@ export const StickyScroll = ({
 
   // Memoize linearGradients so it only gets recalculated if dependencies change
   const linearGradients = useMemo(() => [
+    "linear-gradient(to bottom right, rgba(6, 182, 212, 0.8), rgba(16, 185, 129, 0.8))", // cyan-500, emerald-500 with 0.8 opacity
     "linear-gradient(to bottom right, rgba(6, 182, 212, 0.8), rgba(16, 185, 129, 0.8))", // cyan-500, emerald-500 with 0.8 opacity
     "linear-gradient(to bottom right, rgba(236, 72, 153, 0.8), rgba(102, 126, 234, 0.8))", // pink-500, indigo-500 with 0.8 opacity
     "linear-gradient(to bottom right, rgba(251, 146, 60, 0.8), rgba(234, 179, 8, 0.8))", // orange-500, yellow-500 with 0.8 opacity

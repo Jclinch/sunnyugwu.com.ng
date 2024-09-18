@@ -8,6 +8,36 @@ import "./styles/explore-btn.scss";
 
 const content = [
   {
+    title: "Carhesy",
+    description: (
+      <div>
+        <div className=" w-full">
+          Experience worry-free Driving! <br />
+          Our skilled auto maintenance services guarantee peak performance for
+          your vehicle, ensuring you hit the road with confidence.
+        </div>
+        <div>
+          <a
+            href="https://carhesy-website.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button ml-[135px] mt-8">
+              <svg className="svgIcon" viewBox="0 0 384 512">
+                <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+              </svg>
+            </button>
+          </a>
+        </div>
+      </div>
+    ),
+    content: (
+      <div className="h-full w-full flex items-center justify-center text-white">
+        <Image src="/images/carhesy.png" alt="" width={450} height={450} />
+      </div>
+    ),
+  },
+  {
     title: "Total Scope Marketing Solutions",
     description: (
       <div>
