@@ -32,7 +32,7 @@
     position: absolute;
     bottom: -20px;
     content: "Explore";
-    color: orangered;
+    color: #007BFF;
     /* transition-duration: .3s; */
     font-size: 0px;
   }
@@ -52,6 +52,6 @@
   transform: rotate(45deg);
 
   path {
-    fill: orangered;
+    fill: #007BFF;
   }
 }

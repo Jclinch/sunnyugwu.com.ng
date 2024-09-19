@@ -4,12 +4,12 @@ import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(0, 0, 0)", // Black
-  gradientBackgroundEnd = "rgb(19, 45, 70)", // Dark blue-gray
+  gradientBackgroundEnd = "rgb(0, 4, 28)", // Dark blue-gray
   firstColor = "0, 0, 0", // Black
-  secondColor = "19, 45, 70", // Dark blue-gray
-  thirdColor = "1, 195, 142", // Bright teal
-  fourthColor = "26, 30, 41", // Very dark bluish-gray
-  fifthColor = "138, 47, 24", // Dark red-brown
+  secondColor = "27, 38, 59", // blue-gray
+  thirdColor = "1, 4, 46", // dark blue-gray
+  fourthColor = "0, 123, 255", // lite bluish-gray
+  fifthColor = "0, 191, 166", // Dark red-brown
   pointerColor = "140, 100, 255", // Keeping the original pointer color
   size = "80%",
   blendingValue = "hard-light",

@@ -7,7 +7,7 @@
   display: flex;
   color: #b1dae7;
   align-items: center;
-  border: 1px solid orangered;
+  border: 1px solid #00BFA6;
   border-radius: 60px;
   background-color: #05081c;
   overflow: hidden;
@@ -29,7 +29,7 @@
     transform: translateX(109px);
     height: 100%;
     width: 39px;
-    background-color: orangered;
+    background-color: #00BFA6;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@
   }
 
   &:hover {
-    background: orangered;
+    background: #00BFA6;
 
     .resume-button2-text {
       color: transparent;
@@ -54,10 +54,10 @@
   }
 
   &:active {
-    border: 1px solid orangered;
+    border: 1px solid #00BFA6;
 
     .resume-button2-icon {
-      background-color: orangered;
+      background-color: #00BFA6;
     }
   }
 }

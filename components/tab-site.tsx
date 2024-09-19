@@ -32,7 +32,7 @@ export function TabSite() {
     {
       title: "Home",
       value: "home",
-      content: <HomeContent onTabClick={handleTabClick} />, // Pass the function as a prop
+      content: <HomeContent onTabClick={handleTabClick} />, 
       icon: <IconHome stroke={1} />,
     },
     {
@@ -114,7 +114,7 @@ const HomeContent = ({ onTabClick }: { onTabClick: (tab: string) => void }) => {
       <div className="flex flex-col w-[600px] mt-[50px]">
         <h1 className="text-4xl font-bold">
           -- Hello, I&apos;m{" "}
-          <Highlight className="text-[orangered] dark:text-white">
+          <Highlight className="text-[#F0F0F0] dark:text-[#F0F0F0]">
             SUNNY UGWU
           </Highlight>
         </h1>
@@ -141,7 +141,7 @@ const ServiceContent = ({ title }: { title: string }) => {
   return (
     <div className="bg-[#0F172ACC] p-[40rem]">
       <div className="text-center">
-        <h1 className="text-5xl font-bold mt-[-40px] text-[orangered]">
+        <h1 className="text-5xl font-bold mt-[-40px] text-[#007BFF]">
           {title}
         </h1>
         <div className="mt-4 ">
@@ -165,7 +165,7 @@ const PortfolioContent = () => {
 const ContactContent = ({ title }: { title: string }) => {
   return (
     <div className=" bg-[#0F172ACC] p-[40rem]">
-      <h1 className="text-5xl font-bold text-center mt-[-20px] text-[orangered]">
+      <h1 className="text-5xl font-bold text-center mt-[-20px] text-[#007BFF]">
         {title}
       </h1>
       <div className="mt-[38px]">
@@ -179,7 +179,7 @@ const ContactContent = ({ title }: { title: string }) => {
 const SocialMediaContent = ({ title }: { title: string }) => {
   return (
     <div className="bg-[#0F172ACC] p-[40rem]">
-      <div className="text-5xl font-bold text-center sticky z-10  text-[orangered] mt-[20px]">
+      <div className="text-5xl font-bold text-center sticky z-10  text-[#007BFF] mt-[20px]">
         {title}
       </div>
       <div className="text-2xl mt-[-70px]">
