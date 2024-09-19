@@ -20,7 +20,7 @@ export default function PreloaderWrapper() {
     const timer = setTimeout(() => {
       console.log("Fallback: Hiding preloader after timeout");
       hidePreloader();
-    }, 5000); // 5 seconds fallback
+    }, 3000); // 3 seconds fallback
 
     // Cleanup the event listener and the timer
     return () => {

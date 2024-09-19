@@ -22,7 +22,7 @@
     backdrop-filter: blur(24px);
     border-radius: 10px;
     overflow: hidden;
-    outline: 2px solid orangered;
+    outline: 2px solid #00BFA6;
   }
 
   .service-card-blob {
@@ -33,7 +33,7 @@
     width: 150px;
     height: 450px;
     border-radius: 50%;
-    background-color: orangered;
+    background-color: #00BFA6;
     opacity: 1;
     filter: blur(12px);
     animation: blob-bounce 5s infinite ease;
