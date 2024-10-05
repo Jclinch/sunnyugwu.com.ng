@@ -32,7 +32,7 @@ const content = [
       </div>
     ),
     content: (
-      <div className="h-full w-full flex items-center justify-center text-white">
+      <div className="h-full w-full md:flex items-center justify-center text-white hidden ">
         <Image src="/images/carhesy.png" alt="" width={450} height={450} />
       </div>
     ),

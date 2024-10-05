@@ -71,3 +71,44 @@
     transform: translate(-100%, -100%) translate3d(0, 0, 0);
   }
 }
+
+
+@media (max-width: 768px) {
+  // Add styles for the toggle buttons
+  .toggle-button {
+    cursor: pointer;
+    border: none;
+    background-color: #e2e8f0;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background-color: #d1d5db; // Light gray on hover
+    }
+    
+    &.active {
+      background-color: #00BFA6;
+      color: white;
+    }
+  }
+}
+
+
+.toggle-button {
+  background-color: transparent;
+  font-size: 0.875rem;
+  border: 2px solid #00bfa6;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: #505472;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+  &.active {
+    background-color: #00bfa6;
+    color: white;
+  }
+
+  &:hover {
+    background-color: rgba(0, 191, 166, 0.5);
+  }
+}
