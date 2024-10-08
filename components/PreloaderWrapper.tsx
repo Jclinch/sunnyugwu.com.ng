@@ -16,7 +16,7 @@ export default function PreloaderWrapper() {
     // Event listener for the window 'load' event
     window.addEventListener("load", hidePreloader);
 
-    // Fallback: in case 'load' event is not detected, hide the preloader after 5 seconds
+    // Fallback: in case 'load' event is not detected, hide the preloader after 0.5 seconds
     const timer = setTimeout(() => {
       console.log("Fallback: Hiding preloader after timeout");
       hidePreloader();

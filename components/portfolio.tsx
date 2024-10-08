@@ -163,8 +163,15 @@ const content = [
     ),
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
-        <Image src="/images/RPS.avif" alt="" width={450} height={450} />
-      </div>
+  <Image
+    src="/images/RPS.avif"
+    alt=""
+    width={500} 
+    height={450} 
+    className="w-full h-full object-cover" 
+  />
+</div>
+
     ),
   },
 ];
