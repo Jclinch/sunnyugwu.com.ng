@@ -15,14 +15,15 @@ export const StickyScroll = ({
   }[];
   contentClassName?: string;
 }) => {
-  const [activeCard, setActiveCard] = React.useState(0);
+  const [activeCard, setActiveCard] = useState(0);
   const ref = useRef<HTMLDivElement | null>(null);
-    const { scrollYProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     container: ref,
     offset: ["start start", "end start"],
   });
   const cardLength = content.length;
 
+  // Update active card based on scroll breakpoints
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const cardsBreakpoints = content.map((_, index) => index / cardLength);
     const closestBreakpointIndex = cardsBreakpoints.reduce(
@@ -39,19 +40,20 @@ export const StickyScroll = ({
   });
 
   const backgroundColors = [
-    "rgba(0, 28, 54, 0.8)", // --slate-950 with 0.8 opacity
-    "rgba(15, 23, 42, 0.8)", // --slate-950 with 0.8 opacity
-    "rgba(0, 0, 0, 0.8)", // black with 0.8 opacity
-    "rgba(38, 38, 38, 0.8)", // --neutral-900 with 0.8 opacity
+    "rgba(0, 28, 54, 0.8)", // slate-950
+    "rgba(15, 23, 42, 0.8)", // slate-900
+    "rgba(0, 0, 0, 0.8)", // black
+    "rgba(38, 38, 38, 0.8)", // neutral-900
   ];
 
-  // Memoize linearGradients so it only gets recalculated if dependencies change
-  const linearGradients = useMemo(() => [
-    "linear-gradient(to bottom right, rgba(6, 182, 212, 0.8), rgba(16, 185, 129, 0.8))", // cyan-500, emerald-500 with 0.8 opacity
-    "linear-gradient(to bottom right, rgba(6, 182, 212, 0.8), rgba(16, 185, 129, 0.8))", // cyan-500, emerald-500 with 0.8 opacity
-    "linear-gradient(to bottom right, rgba(236, 72, 153, 0.8), rgba(102, 126, 234, 0.8))", // pink-500, indigo-500 with 0.8 opacity
-    "linear-gradient(to bottom right, rgba(251, 146, 60, 0.8), rgba(234, 179, 8, 0.8))", // orange-500, yellow-500 with 0.8 opacity
-  ], []); // Empty dependency array since the gradients don’t change
+  const linearGradients = useMemo(
+    () => [
+      "linear-gradient(to bottom right, rgba(6, 182, 212, 0.8), rgba(16, 185, 129, 0.8))",
+      "linear-gradient(to bottom right, rgba(236, 72, 153, 0.8), rgba(102, 126, 234, 0.8))",
+      "linear-gradient(to bottom right, rgba(251, 146, 60, 0.8), rgba(234, 179, 8, 0.8))",
+    ],
+    []
+  );
 
   const [backgroundGradient, setBackgroundGradient] = useState(
     linearGradients[0]
@@ -59,51 +61,47 @@ export const StickyScroll = ({
 
   useEffect(() => {
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard, linearGradients]); // linearGradients is now stable and won’t change on every render
+  }, [activeCard, linearGradients]);
 
   return (
     <motion.div
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-screen  overflow-y-auto flex justify-center relative space-x-[20rem] w-lvw rounded-md p-5"
+      className="w-full h-screen md:h-screen overflow-y-auto md:overflow-y-auto flex flex-col md:flex-row justify-center relative space-y-4 md:space-y-0 md:space-x-16 rounded-md p-5"
       ref={ref}
     >
-      <div className="div relative flex items-start justify-center px-4">
-        <div className="max-w-xl">
-          <div className="ml-[550px] mt-[25px] text-5xl text-[#007BFF]">
-            Portfolio
-          </div>
-          {content.map((item, index) => (
-            <div
-              key={item.title + index}
-              className="my-[80px] ml-[150px] w-full  "
-            >
-              <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                className="text-4xl w-full  text-center font-bold text-[#00BFA6]"
-              >
-                {item.title}
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                className="text-lg text-slate-300 max-w-sm mt-10 ml-[70px]"
-              >
-                {item.description}
-              </motion.p>
+      {/* Add overflow-y-scroll specifically for mobile */}
+      <div className="flex-1 px-4 h-full md:h-auto overflow-y-scroll md:overflow-visible">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#007BFF] text-center ">
+          Portfolio
+        </h1>
+        {content.map((item, index) => (
+          <motion.div
+            key={item.title + index}
+            // left side text container
+            className="my-8 md:my-20 text-center md:w-[80%]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: activeCard === index ? 1 : 0.3 }}
+          >
+            {/* title */}
+            <h2 className="text-2xl md:text-4xl font-bold text-[#00BFA6]">
+              {item.title}
+            </h2>
+            {/* description */}
+            <div className="text-base md:text-lg text-slate-300 mt-4">
+              {item.description}
             </div>
-          ))}
-        </div>
+          </motion.div>
+        ))}
       </div>
+
+      {/* Ensure this is hidden on mobile */}
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          // "image-box hidden lg:block h-[30rem] w-[30rem] md:pr-[300px] border border-red-700 pt-[160px] rounded-md bg-white sticky top-10 overflow-hidden",
-          "image-box hidden lg:block h-[30rem] w-[30rem] md:pr-[300px] border border-red-700 pt-[160px] rounded-md bg-white sticky top-10 overflow-hidden",
+          "hidden lg:block h-[20rem] w-[20rem] md:w-[25rem] md:h-[25rem] border pt-10 rounded-md sticky top-10 overflow-hidden",
           contentClassName
-
         )}
       >
         {content[activeCard].content ?? null}

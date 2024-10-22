@@ -221,7 +221,7 @@ const ServiceContent = ({ title }: { title: string }) => {
 
 const PortfolioContent = () => {
   return (
-        <div className="text-center">
+        <div className="text-center ">
           <div className="mt-4">
             <PortfilioContent />
           </div>
