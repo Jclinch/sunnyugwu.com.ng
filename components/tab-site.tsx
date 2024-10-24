@@ -22,7 +22,7 @@ import { PortfilioContent } from "./portfolio";
 import ContactForm from "./contact-form";
 import { SocialMedia } from "./social-media";
 import { Tools } from "./tools";
-import Head from "next/head"
+import Head from "next/head";
 // import { Tools } from "./tools";
 
 export function TabSite() {
@@ -86,9 +86,24 @@ export function TabSite() {
   ];
 
   return (
-
-    
     <div className="h-full md:h-screen flex flex-col md:flex-row relative">
+      <Head>
+        {/* Hotjar Tracking Code */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(h,o,t,j,a,r){
+                   h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:5184105,hjsv:6};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+            `,
+          }}
+        />
+      </Head>
       {/* Hamburger menu for mobile */}
       <div className="md:hidden absolute top-4 left-4 z-20">
         <button
@@ -173,24 +188,7 @@ export function TabSite() {
 // HomeContent component
 const HomeContent = ({ onTabClick }: { onTabClick: (tab: string) => void }) => {
   return (
-    <>
-    <Head>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(h,o,t,j,a,r){
-                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5184105,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          `,
-        }}
-      />
-    </Head>
-        <div className="flex flex-row gap-[2rem] ">
+    <div className="flex flex-row gap-[2rem] ">
       <div className="ml-[-5rem] mt-[-3rem] hidden md:block">
         <Image src="/images/sunnyUgwu.png" alt="" width={400} height={400} />
       </div>
@@ -201,14 +199,16 @@ const HomeContent = ({ onTabClick }: { onTabClick: (tab: string) => void }) => {
             SUNNY UGWU
           </Highlight>
         </h1>
-        <h2 className="text-2xl md:text-5xl mt-2 text-center">A Software Developer</h2>
+        <h2 className="text-2xl md:text-5xl mt-2 text-center">
+          A Software Developer
+        </h2>
         <p className="mt-6 text-base md:text-lg text-justify md:text-justify">
           I&apos;m a developer who is well-versed in both front and back end
           technologies. Having skills in HTML, CSS, JS, React/Next.js, Go,
-          Node.js and PostgreSQL. I develop, maintain and integrate Restful
-          APIs for Web applications and also have experience in managing
-          databases and exceptional problem-solving skills with a spirit
-          of collegiality and growth within the profession.
+          Node.js and PostgreSQL. I develop, maintain and integrate Restful APIs
+          for Web applications and also have experience in managing databases
+          and exceptional problem-solving skills with a spirit of collegiality
+          and growth within the profession.
         </p>
         <div className="md:mt-6 flex flex-col justify-center md:flex-row md:gap-[6rem] items-center gap-4 w-full md:w-auto">
           <div className="w-[50%] h-[50%] md:w-auto ml-[-210px] md:ml-[-160px] mt-5 md:mt-0">
@@ -220,139 +220,59 @@ const HomeContent = ({ onTabClick }: { onTabClick: (tab: string) => void }) => {
         </div>
       </div>
     </div>
-    </>
   );
 };
 
 const ServiceContent = ({ title }: { title: string }) => {
   return (
-    <>
-    <Head>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(h,o,t,j,a,r){
-                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5184105,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          `,
-        }}
-      />
-    </Head>
-        <div className="bg-[#0F172ACC] w-screen h-screen flex items-center justify-center">
-          <div className="text-center ">
-            <h1 className="text-5xl font-bold  text-[#007BFF]">
-              {title}
-            </h1>
-            <div className="mt-4 ">
-              <ServiceTab />
-            </div>
-            <div className=""></div>
-          </div>
+    <div className="bg-[#0F172ACC] w-screen h-screen flex items-center justify-center">
+      <div className="text-center ">
+        <h1 className="text-5xl font-bold  text-[#007BFF]">{title}</h1>
+        <div className="mt-4 ">
+          <ServiceTab />
         </div>
-    </>
-      );
-    };
+        <div className=""></div>
+      </div>
+    </div>
+  );
+};
 
 const PortfolioContent = () => {
   return (
-    <>
-    <Head>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(h,o,t,j,a,r){
-                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5184105,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          `,
-        }}
-      />
-    </Head>
-        <div className="text-center ">
-          <div className="mt-4">
-            <PortfilioContent />
-          </div>
-          <div className="mt-6"></div>
-        </div>
-        </>
-      );
-    };
+    <div className="text-center ">
+      <div className="mt-4">
+        <PortfilioContent />
+      </div>
+      <div className="mt-6"></div>
+    </div>
+  );
+};
 
 const ContactContent = ({ title }: { title: string }) => {
   return (
-    <>
-    <Head>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(h,o,t,j,a,r){
-                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5184105,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          `,
-        }}
-      />
-    </Head>
-        <div className=" bg-[#0F172ACC] w-screen h-screen ">
-          <h1 className="text-5xl font-bold text-center mt-[80px] md:mt-[30px] text-[#007BFF]">
-            {title}
-          </h1>
-          <div className="mt-[38px]">
-            <ContactForm />
-          </div>
-        </div>
-        </>
-      );
-    };
+    <div className=" bg-[#0F172ACC] w-screen h-screen ">
+      <h1 className="text-5xl font-bold text-center mt-[80px] md:mt-[30px] text-[#007BFF]">
+        {title}
+      </h1>
+      <div className="mt-[38px]">
+        <ContactForm />
+      </div>
+    </div>
+  );
+};
 
 const SocialMediaContent = ({ title }: { title: string }) => {
   return (
-    <>
-    <Head>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(h,o,t,j,a,r){
-                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5184105,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          `,
-        }}
-      />
-    </Head>
-        <div className="bg-[#0F172ACC] w-screen h-screen ">
-          <div className="text-5xl font-bold text-center sticky z-10  text-[#007BFF] mt-[80px] md:mt-[30px]">
-            {title}
-          </div>
-          <div className="text-2xl mt-[-70px]">
-            <SocialMedia />
-          </div>
-          <div className="mt-[-100px]">
-            <Tools />
-          </div>
-        </div>
-        </>
-      );
-    };
-
-
-
-
-
+    <div className="bg-[#0F172ACC] w-screen h-screen ">
+      <div className="text-5xl font-bold text-center sticky z-10  text-[#007BFF] mt-[80px] md:mt-[30px]">
+        {title}
+      </div>
+      <div className="text-2xl mt-[-70px]">
+        <SocialMedia />
+      </div>
+      <div className="mt-[-100px]">
+        <Tools />
+      </div>
+    </div>
+  );
+};
