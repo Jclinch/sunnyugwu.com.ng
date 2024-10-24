@@ -22,6 +22,7 @@ import { PortfilioContent } from "./portfolio";
 import ContactForm from "./contact-form";
 import { SocialMedia } from "./social-media";
 import { Tools } from "./tools";
+import Head from "next/head"
 // import { Tools } from "./tools";
 
 export function TabSite() {
@@ -85,6 +86,8 @@ export function TabSite() {
   ];
 
   return (
+
+    
     <div className="h-full md:h-screen flex flex-col md:flex-row relative">
       {/* Hamburger menu for mobile */}
       <div className="md:hidden absolute top-4 left-4 z-20">
@@ -170,7 +173,24 @@ export function TabSite() {
 // HomeContent component
 const HomeContent = ({ onTabClick }: { onTabClick: (tab: string) => void }) => {
   return (
-    <div className="flex flex-row gap-[2rem] ">
+    <>
+    <Head>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(h,o,t,j,a,r){
+                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5184105,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `,
+        }}
+      />
+    </Head>
+        <div className="flex flex-row gap-[2rem] ">
       <div className="ml-[-5rem] mt-[-3rem] hidden md:block">
         <Image src="/images/sunnyUgwu.png" alt="" width={400} height={400} />
       </div>
@@ -200,11 +220,29 @@ const HomeContent = ({ onTabClick }: { onTabClick: (tab: string) => void }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
 const ServiceContent = ({ title }: { title: string }) => {
   return (
+    <>
+    <Head>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(h,o,t,j,a,r){
+                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5184105,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `,
+        }}
+      />
+    </Head>
         <div className="bg-[#0F172ACC] w-screen h-screen flex items-center justify-center">
           <div className="text-center ">
             <h1 className="text-5xl font-bold  text-[#007BFF]">
@@ -216,22 +254,58 @@ const ServiceContent = ({ title }: { title: string }) => {
             <div className=""></div>
           </div>
         </div>
+    </>
       );
     };
 
 const PortfolioContent = () => {
   return (
+    <>
+    <Head>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(h,o,t,j,a,r){
+                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5184105,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `,
+        }}
+      />
+    </Head>
         <div className="text-center ">
           <div className="mt-4">
             <PortfilioContent />
           </div>
           <div className="mt-6"></div>
         </div>
+        </>
       );
     };
 
 const ContactContent = ({ title }: { title: string }) => {
   return (
+    <>
+    <Head>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(h,o,t,j,a,r){
+                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5184105,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `,
+        }}
+      />
+    </Head>
         <div className=" bg-[#0F172ACC] w-screen h-screen ">
           <h1 className="text-5xl font-bold text-center mt-[80px] md:mt-[30px] text-[#007BFF]">
             {title}
@@ -240,11 +314,29 @@ const ContactContent = ({ title }: { title: string }) => {
             <ContactForm />
           </div>
         </div>
+        </>
       );
     };
 
 const SocialMediaContent = ({ title }: { title: string }) => {
   return (
+    <>
+    <Head>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(h,o,t,j,a,r){
+                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5184105,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `,
+        }}
+      />
+    </Head>
         <div className="bg-[#0F172ACC] w-screen h-screen ">
           <div className="text-5xl font-bold text-center sticky z-10  text-[#007BFF] mt-[80px] md:mt-[30px]">
             {title}
@@ -256,11 +348,11 @@ const SocialMediaContent = ({ title }: { title: string }) => {
             <Tools />
           </div>
         </div>
+        </>
       );
     };
 
 
 
-//==================================
 
 
