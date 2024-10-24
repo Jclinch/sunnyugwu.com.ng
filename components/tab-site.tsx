@@ -22,7 +22,8 @@ import { PortfilioContent } from "./portfolio";
 import ContactForm from "./contact-form";
 import { SocialMedia } from "./social-media";
 import { Tools } from "./tools";
-import Head from "next/head";
+// import Head from "next/head";
+import HotjarTracking from "./hotjar";
 // import { Tools } from "./tools";
 
 export function TabSite() {
@@ -30,6 +31,7 @@ export function TabSite() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
+  
   // Close nav when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -87,23 +89,9 @@ export function TabSite() {
 
   return (
     <div className="h-full md:h-screen flex flex-col md:flex-row relative">
-      <Head>
+      
         {/* Hotjar Tracking Code */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(h,o,t,j,a,r){
-                   h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-              h._hjSettings={hjid:5184105,hjsv:6};
-              a=o.getElementsByTagName('head')[0];
-              r=o.createElement('script');r.async=1;
-              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-              a.appendChild(r);
-              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-            `,
-          }}
-        />
-      </Head>
+        <HotjarTracking />
       {/* Hamburger menu for mobile */}
       <div className="md:hidden absolute top-4 left-4 z-20">
         <button
