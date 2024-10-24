@@ -67,9 +67,10 @@ const FloatingDockMobile = ({
                   key={item.title}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-20 w-20 rounded-full bg-[#05081c] dark:bg-neutral-900 flex items-center justify-center"
+                  className="h-10 w-10 rounded-full bg-[#05081c] dark:bg-neutral-900 flex items-center justify-center"
+                  
                 >
-                  <div className="h-5 w-5">{item.icon}</div>
+                <div className="h-5 w-5">{item.icon}</div>
                 </Link>
               </motion.div>
             ))}
@@ -78,10 +79,13 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-[#05081c] dark:bg-neutral-800 flex items-center justify-center"
+        className="h-10 w-10 rounded-full bg-[#05081c] dark:bg-neutral-800 flex items-center justify-center "
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-100 dark:text-neutral-400" />
+        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-100 dark:text-neutral-400 " />
       </button>
+      <div className="text-center text-neutral-100 dark:text-neutral-400 text-xs mt-1">
+        Click me
+      </div> {/* Add this text element */}
     </div>
   );
 };

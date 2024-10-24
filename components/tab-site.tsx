@@ -207,7 +207,7 @@ const ServiceContent = ({ title }: { title: string }) => {
   return (
         <div className="bg-[#0F172ACC] w-screen h-screen flex items-center justify-center">
           <div className="text-center ">
-            <h1 className="text-5xl font-bold mt-[-40px] text-[#007BFF]">
+            <h1 className="text-5xl font-bold  text-[#007BFF]">
               {title}
             </h1>
             <div className="mt-4 ">
@@ -233,7 +233,7 @@ const PortfolioContent = () => {
 const ContactContent = ({ title }: { title: string }) => {
   return (
         <div className=" bg-[#0F172ACC] w-screen h-screen ">
-          <h1 className="text-5xl font-bold text-center mt-[-20px] text-[#007BFF]">
+          <h1 className="text-5xl font-bold text-center mt-[80px] md:mt-[30px] text-[#007BFF]">
             {title}
           </h1>
           <div className="mt-[38px]">
@@ -246,7 +246,7 @@ const ContactContent = ({ title }: { title: string }) => {
 const SocialMediaContent = ({ title }: { title: string }) => {
   return (
         <div className="bg-[#0F172ACC] w-screen h-screen ">
-          <div className="text-5xl font-bold text-center sticky z-10  text-[#007BFF] mt-[20px]">
+          <div className="text-5xl font-bold text-center sticky z-10  text-[#007BFF] mt-[80px] md:mt-[30px]">
             {title}
           </div>
           <div className="text-2xl mt-[-70px]">
