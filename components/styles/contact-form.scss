@@ -69,12 +69,12 @@
 
   .form-group input:focus {
     outline: none;
-    border-color: orangered;
+    border-color: #00BFA6;
   }
 
   .form-group textarea:focus {
     outline: none;
-    border-color: orangered;
+    border-color: #00BFA6;
   }
 
   .form-submit-btn {
@@ -97,7 +97,7 @@
   }
 
   .form-submit-btn:hover {
-    background-color: orangered;
+    background-color: #00BFA6;
     border-color: #fff;
   }
 }
@@ -121,9 +121,9 @@
   --speed-of-animation: 0.9s;
   --gap: 6px;
   --first-color: #b1dae7;
-  --second-color: orangered;
+  --second-color: #00BFA6;
   --third-color: #05081c;
-  --fourth-color: orangered;
+  --fourth-color: #00BFA6;
   --fifth-color: #b1dae7;
   display: flex;
   justify-content: center;
