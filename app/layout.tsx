@@ -1,11 +1,14 @@
+"use client"; // Mark this component as a Client Component
 
 import { useEffect } from "react";
-import { useRouter } from "next/router";
-import type { Metadata } from "next";
+import { usePathname } from "next/navigation"; // Use this to get the current path
 import localFont from "next/font/local";
 import "./globals.css";
 import PreloaderWrapper from "@/components/PreloaderWrapper";
 import Script from "next/script";
+
+// Import metadata from the separate file
+import { metadata } from "./metadata";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,32 +21,21 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "Sunny Ugwu",
-  description: "Official website",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const router = useRouter();
+  const pathname = usePathname(); // Get the current pathname
 
   useEffect(() => {
-    const handleRouteChange = (url: string) => {
+    // Track page views when the pathname changes
+    if (typeof window !== "undefined" && window.gtag) {
       window.gtag("config", "G-JBZGV9J85W", {
-        page_path: url, // Use the structured type for config
+        page_path: pathname, // Set the page path
       });
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChange);
-    
-    // Cleanup the event listener on unmount
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+    }
+  }, [pathname]); // Effect runs on pathname change
 
   return (
     <html lang="en">
