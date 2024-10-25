@@ -108,7 +108,7 @@ export default function RootLayout({
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       window.gtag("config", "G-JBZGV9J85W", {
-        page_path: url,
+        page_path: url, // Use the structured type for config
       });
     };
 
