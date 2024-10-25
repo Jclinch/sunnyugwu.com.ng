@@ -28,15 +28,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) */}
         <Script
-          id="google-tag-manager" // Added id here
+          id="google-gtag" // Added id here
+          src="https://www.googletagmanager.com/gtag/js?id=G-JBZGV9J85W"
+          strategy="afterInteractive" // Load after interactive
+        />
+        <Script
+          id="google-gtag-init" // Added id here
           dangerouslySetInnerHTML={{
             __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-5VQWDPWM');
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-JBZGV9J85W');
             `,
           }}
         />
@@ -44,18 +50,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Script
-          id="google-tag-manager-noscript" // Added id here
-          dangerouslySetInnerHTML={{
-            __html: `
-              <noscript>
-                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VQWDPWM"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
-              </noscript>
-            `,
-          }}
-        />
-        
         <PreloaderWrapper />
         {children}
       </body>
