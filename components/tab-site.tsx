@@ -23,7 +23,6 @@ import ContactForm from "./contact-form";
 import { SocialMedia } from "./social-media";
 import { Tools } from "./tools";
 // import Head from "next/head";
-import HotjarTracking from "./hotjar";
 // import { Tools } from "./tools";
 
 export function TabSite() {
@@ -90,8 +89,6 @@ export function TabSite() {
   return (
     <div className="h-full md:h-screen flex flex-col md:flex-row relative">
       
-        {/* Hotjar Tracking Code */}
-        <HotjarTracking />
       {/* Hamburger menu for mobile */}
       <div className="md:hidden absolute top-4 left-4 z-20">
         <button
