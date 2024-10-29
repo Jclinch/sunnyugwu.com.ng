@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
 import "./styles/contact-form.scss";
-import Head from "next/head";
 
 export type FormData = {
   name: string;
@@ -34,22 +33,7 @@ const ContactForm = () => {
 
   return (
     <>
-    <Head>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(h,o,t,j,a,r){
-                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5184105,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          `,
-        }}
-      />
-    </Head>
+    
     <div className="form-container">
       <form onSubmit={handleSubmit(onSubmit)} className="form">
         <div className="form-group">
